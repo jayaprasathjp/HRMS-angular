@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Employee List</h1>
+  <input class="searchbar"
+    type="text"
+    [formControl]="searchControl"
+    placeholder="Search employees..."
+  />
+<div class="table-wrapper">
+  <table border="1" class="scrolldown">
+    <thead>
+      <tr>
+        <th (click)="sort('id')">ID</th>
+        <th (click)="sort('name')">Name</th>
+        <th (click)="sort('department')">Department</th>
+        <th (click)="sort('job_title')">Job Title</th>
+        <th (click)="sort('email')">Email</th>
+        <th (click)="sort('salary')">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of filteredEmployees">
+        <td>
+          <a class="rowid" (click)="empid(row.employee_id)">{{
+            row.employee_id
+          }}</a>
+        </td>
+        <td>
+          <a (click)="empid(row.employee_id)"> {{ row.name }}</a>
+        </td>
+        <td>
+          <a (click)="empid(row.employee_id)">{{ row.department }}</a>
+        </td>
+        <td>
+          <a (click)="empid(row.employee_id)">{{ row.job_title }}</a>
+        </td>
+        <td>
+          <a (click)="empid(row.employee_id)"> {{ row.email }}</a>
+        </td>
+        <td>
+          <a (click)="empid(row.employee_id)">{{ row.salary }}</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
