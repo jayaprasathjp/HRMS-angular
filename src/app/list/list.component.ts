@@ -49,7 +49,8 @@ export class ListComponent implements OnInit {
     const direction = (this.sortDirection[field] = !this.sortDirection[field])? 1: -1;
     this.filteredEmployees.sort((a, b) => (a[field] > b[field] ? 1 : -1) * direction);
   }
-  empid(employeeId: object): void {
+  
+  view(employeeId: object): void {
     this.router.navigate(['/view'], { queryParams: { id: employeeId } });
   }
 }
