@@ -12,10 +12,6 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #ddd;
 }
-td.rowid{
-    max-width: 20px;
-}
-
 thead {
   color: white;
   position: sticky;
@@ -26,7 +22,6 @@ tbody {
     overflow-y: auto;
     width: 100%;
 }
-
 th {
   padding-top: 12px;
   padding-bottom: 12px;

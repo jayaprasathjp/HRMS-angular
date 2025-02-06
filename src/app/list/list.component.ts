@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 import { FormControl } from '@angular/forms';
@@ -31,31 +31,29 @@ export class ListComponent implements OnInit {
       });
   }
   filterEmployees(searchTerm: string | null) {
-    
     if (searchTerm == null) {
       this.filteredEmployees = this.employee;
     } else {
       const lowerCaseSearch = searchTerm.toLowerCase();
-      this.filteredEmployees = this.employee.filter((emp) => emp.employee_id.toString().includes(lowerCaseSearch) || 
-      emp.name.toLowerCase().includes(lowerCaseSearch) || 
-      emp.department.toLowerCase().includes(lowerCaseSearch) || 
-      emp.job_title.toLowerCase().includes(lowerCaseSearch) || 
-      emp.email.toLowerCase().includes(lowerCaseSearch)
+      this.filteredEmployees = this.employee.filter(
+        (emp) =>
+          emp.employee_id.toString().includes(lowerCaseSearch) ||
+          emp.name.toLowerCase().includes(lowerCaseSearch) ||
+          emp.department.toLowerCase().includes(lowerCaseSearch) ||
+          emp.job_title.toLowerCase().includes(lowerCaseSearch) ||
+          emp.email.toLowerCase().includes(lowerCaseSearch)
       );
     }
   }
-
-  sortDirection: { [key: string]: boolean } = {}; 
-  sort(column: string) {
-    this.sortDirection[column] = !this.sortDirection[column]; 
-    const direction = this.sortDirection[column] ? 1 : -1;
-    this.filteredEmployees.sort((a,b) => {
-      if(a[column]<b[column]) return -1*direction;
-      if(a[column]>b[column]) return 1*direction;
-      return 0;
-    });
+  sortDirection: Record<string, boolean> = {};
+  sort(field: string) {
+    const direction = (this.sortDirection[field] = !this.sortDirection[field])
+      ? 1
+      : -1;
+    this.filteredEmployees.sort(
+      (a, b) => (a[field] > b[field] ? 1 : -1) * direction
+    );
   }
-
   empid(employeeId: object): void {
     this.router.navigate(['/view'], { queryParams: { id: employeeId } });
   }

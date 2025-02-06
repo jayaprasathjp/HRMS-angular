@@ -5,8 +5,7 @@
     [formControl]="searchControl"
     placeholder="Search employees..."
   />
-<div class="table-wrapper">
-  <table border="1" class="scrolldown">
+  <table border="1">
     <thead>
       <tr>
         <th (click)="sort('id')">ID</th>
@@ -20,7 +19,7 @@
     <tbody>
       <tr *ngFor="let row of filteredEmployees">
         <td>
-          <a class="rowid" (click)="empid(row.employee_id)">{{
+          <a (click)="empid(row.employee_id)">{{
             row.employee_id
           }}</a>
         </td>
@@ -42,5 +41,4 @@
       </tr>
     </tbody>
   </table>
-</div>
 </div>
