@@ -1,32 +1,23 @@
-<!-- <div class="container">
-  <h1>VIEW</h1>
-  <p>{{employee.employee_id}}</p>
-  <p>{{employee.first_name}}</p>
-  <p>{{employee.last_name}}</p>
-  <p>{{employee.email}}</p>
-  <p>{{employee.department}}</p>
-  <p>{{employee.job_title}}</p>
-</div> -->
 <div class="card">
-  <div class="card-header">
+  <div class="header">
     <h2>{{ employee.name }}</h2>
     <p>{{ employee.job_title }}</p>
   </div>
-  <div class="card-body">
-    <div class="profile-section">
-      <div class="profile-info">
+  <div class="body">
+    <div class="section">
+      <div class="info">
         <p><span class="label">Employee ID:</span> {{ employee.employee_id }}</p>
         <p><span class="label">Email:</span> {{ employee.email }}</p>
         <p><span class="label">Gender:</span> {{ employee.gender }}</p>
         <p><span class="label">Phone Number:</span> {{ employee.phone_number }}</p>
       </div>
-      <div class="profile-info">
+      <div class="info">
         <p><span class="label">Department:</span> {{ employee.department }}</p>
         <p><span class="label">Salary:</span> ${{ employee.salary }}</p>
         <p><span class="label">Skills:</span> {{ employee.skills }}</p>
         <p><span class="label">Projects Completed:</span> {{ employee.projects_completed }}</p>
       </div>
     </div>
-    <a routerLink="/" class="home-button">Back to Home</a> <!-- Home Button -->
+    <a routerLink="/" class="home">Back to Home</a>
   </div>
 </div>

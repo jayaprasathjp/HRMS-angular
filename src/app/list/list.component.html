@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Employee List</h1>
-  <input class="searchbar"
+  <input
+    class="searchbar"
     type="text"
     [formControl]="searchControl"
     placeholder="Search employees..."
@@ -18,25 +19,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of filteredEmployees">
-        <td>
-          <a (click)="empid(row.employee_id)">{{
-            row.employee_id
-          }}</a>
+        <td (click)="view(row.employee_id)">{{ row.employee_id }}
         </td>
-        <td>
-          <a (click)="empid(row.employee_id)"> {{ row.name }}</a>
+        <td (click)="view(row.employee_id)"> {{ row.name }}
         </td>
-        <td>
-          <a (click)="empid(row.employee_id)">{{ row.department }}</a>
+        <td (click)="view(row.employee_id)">{{ row.department }}
         </td>
-        <td>
-          <a (click)="empid(row.employee_id)">{{ row.job_title }}</a>
+        <td (click)="view(row.employee_id)">{{ row.job_title }}
         </td>
-        <td>
-          <a (click)="empid(row.employee_id)"> {{ row.email }}</a>
+        <td (click)="view(row.employee_id)"> {{ row.email }}
         </td>
-        <td>
-          <a (click)="empid(row.employee_id)">{{ row.salary }}</a>
+        <td (click)="view(row.employee_id)">{{ row.salary }}
         </td>
       </tr>
     </tbody>
