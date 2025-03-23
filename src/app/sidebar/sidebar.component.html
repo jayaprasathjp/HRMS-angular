@@ -1,0 +1,55 @@
+<!-- <mat-sidenav-container style="height: 100vh;">
+  <mat-sidenav mode="side" opened style="width: 130px; background: black; color: white; padding: 20px;">
+    <h2 style="text-align: center;">HRMS</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>
+        <a routerLink="list" style="color: #bdb8d7; text-decoration: none; display: block; padding: 15px;">Home</a>
+      </li>
+      <li>
+        <a routerLink="list" style="color: #bdb8d7; text-decoration: none; display: block; padding: 15px;">List</a>
+      </li>
+      <li>
+        <a href="#" style="color: #bdb8d7; text-decoration: none; display: block; padding: 15px;">Add</a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <div class="header" style="background: black; color: white; padding: 20px; text-align: center;">
+      Employee List
+    </div>
+    <div class="info" style="margin: 20px; color: #717171;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+<div class="flex h-screen">
+  <div class="w-48 bg-cyan-700 text-white fixed h-full p-6">
+    <h2 class="text-center text-xl uppercase mb-6">HRMS</h2>
+    <ul>
+      <li class="py-3 border-b   border-gray-700 hover:bg-cyan-800">
+        <a  class="flex justify-center text-sm space-x-2">
+          <span>HOME</span>
+        </a>
+      </li>
+      <li class="py-3 border-b border-gray-700 hover:bg-cyan-800">
+        <a routerLink="list" (click)="this.current='EMPLOYEE LIST'" class="flex justify-center text-sm space-x-2">
+          <span>LIST</span>
+        </a>
+      </li>
+      <li class="py-3 border-b  border-gray-700 hover:bg-cyan-800">
+        <a routerLink="add_employee" (click)="this.current='ADD EMPLOYEE'" class="flex justify-center text-sm space-x-2">
+          <span>ADD</span>
+        </a>
+      </li>
+      
+    </ul>
+   
+  </div>
+  <div class="flex-1 ml-48 bg-gray-100">
+    <div class="bg-cyan-700 flex justify-center text-white p-4 border-b">{{current}}</div>
+    <div class="px-6 text-gray-700 space-y-6">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@
     <p>{{ employee.job_title }}</p>
   </div>
   <div class="body">
-    <div class="section">
+    <div class="section" *ngIf="employee">
       <div class="info">
         <p><span class="label">Employee ID:</span> {{ employee.employee_id }}</p>
         <p><span class="label">Email:</span> {{ employee.email }}</p>
