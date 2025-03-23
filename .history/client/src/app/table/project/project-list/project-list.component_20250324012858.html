@@ -1,0 +1,9 @@
+<app-project-list-header class="flex justify-center mb-3" (searchTerm)="term = $event">
+    <h5 #searchCount>Search result: {{ count }}</h5>
+  </app-project-list-header>
+  <app-project-list-table
+    class="flex justify-center"
+    [term]="term"
+    (searchCount)="updateCount($event)"
+  ></app-project-list-table>
+  
