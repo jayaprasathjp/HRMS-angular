@@ -20,34 +20,3 @@ tr:hover {
   background-color: #0e7490 !important;
   color: white;
 }
-
-/* td,
-th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-tr {
-  color: black;
-  background-color: white;
-}
-thead {
-  color: white;
-  top: 0;
-}
-tbody {
-  max-height: 300px;
-  overflow-y: auto;
-  width: auto;
-}
-th {
-  font-size: 13px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #0e7490;
-  color: white;
-  cursor: pointer;
-}
-input {
-  width: 100%;
-} */

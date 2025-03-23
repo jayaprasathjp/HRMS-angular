@@ -35,5 +35,14 @@ export class EmployeeViewComponent implements OnInit {
         height: '500px',
         data: employeeData,
       });
+      // dialogRef.afterClosed().subscribe(() => {
+      //   this.employeeService.fetchEmployee();
+      //   this.employeeService.getEmployee().subscribe((data) => {
+      //     this.employee = data;
+      //     this.filteredEmployees = this.employee;
+      //     this.dataSource.data = this.filteredEmployees; 
+      //         this.cdr.detectChanges();
+      //   });
+      // });
     }
 }

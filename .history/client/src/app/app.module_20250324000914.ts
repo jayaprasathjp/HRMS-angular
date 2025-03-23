@@ -37,9 +37,20 @@ import { ProjectEditComponent } from './edit-model/project-edit/project-edit.com
 import { OrgChartComponent } from './org-chart/org-chart.component';
 import { EmployeeListComponent } from './table/employee/employee-list/employee-list.component';
 import { EmployeeListHeaderComponent } from './table/employee/employee-list-header/employee-list-header.component';
-import { EmployeeListTableComponent } from './table/employee/employee-list-table/employee-list-table.component';
+import { EmployeeListTableComponent } from './table/employee/employee-list-table/list-table.component';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
+  {
+    path: 'employee-list',
+    component: EmployeeListComponent,
+    canActivate: [AuthGuard],
+  },
+  // {
+  //   path: 'project-list',
+  //   component: ProjectListComponent,
+  //   canActivate: [AuthGuard],
+  // },
   {
     path: 'employee-view',
     component: EmployeeViewComponent,
@@ -48,11 +59,6 @@ const routes: Routes = [
   {
     path: 'org-chart',
     component: OrgChartComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'employee-list',
-    component: EmployeeListComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -83,6 +89,9 @@ export function tokenGetter() {
     SanitizeInputDirective,
     CourtesyTitlePipe,
     AppComponent,
+    EmployeeListComponent,
+    EmployeeListHeaderComponent,
+    EmployeeListTableComponent,
     LoaderComponent,
     LoginComponent,
     ProjectViewComponent,
@@ -94,9 +103,6 @@ export function tokenGetter() {
     EmployeeEditComponent,
     ProjectEditComponent,
     OrgChartComponent,
-    EmployeeListComponent,
-    EmployeeListHeaderComponent,
-    EmployeeListTableComponent,
   ],
   imports: [ FormsModule,
     MatFormFieldModule,

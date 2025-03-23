@@ -25,22 +25,20 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import Toastify from 'toastify-js';
 import { EmployeeEditComponent } from 'src/app/edit-model/employee-edit/employee-edit.component';
 @Component({
-  selector: 'employee-list-table',
-  templateUrl: './list-table.component.html',
-  styleUrls: ['./list-table.component.css'],
-
+  selector: 'app-employee-list-table',
+  templateUrl: './employee-list-table.component.html',
+  styleUrls: ['./employee-list-table.component.css']
 })
 export class EmployeeListTableComponent implements OnInit, OnChanges {
   private _liveAnnouncer = inject(LiveAnnouncer);
   @Input() term: string = '';
   @Output() searchCount = new EventEmitter<number>();
   searchObj: EmployeeSearchModel = {
+    emp_id:'',
     name: '',
-    email: '',
-    salary: '',
-    job_title: '',
-    department: '',
-    employee_id: '',
+    role: '',
+    project:'',
+    reports_to: '',
     global_term: '',
   };
   employee: Employee[] = [];
@@ -56,11 +54,11 @@ export class EmployeeListTableComponent implements OnInit, OnChanges {
 
   displayedColumns: string[] = [
     'index',
-    'employee_id',
+    'emp_id',
     'name',
-    'department',
-    'job_title',
-    'email',
+    'role',
+    'project',
+    'reports',
     'salary',
     'action',
   ];
@@ -78,7 +76,7 @@ export class EmployeeListTableComponent implements OnInit, OnChanges {
       item: Employee,
       sortHeader: string
     ): string | number => {
-      if (sortHeader === 'employee_id' || sortHeader === 'salary') {
+      if (sortHeader === 'emp_id') {
         return parseInt(
           item[sortHeader as keyof Employee]?.replace(/\D/g, ''),
           10
@@ -205,10 +203,9 @@ export class EmployeeListTableComponent implements OnInit, OnChanges {
       (emp) =>
         emp.emp_id.toString().includes(lower) ||
         emp.name.toLowerCase().includes(lower) ||
-        emp.department.toLowerCase().includes(lower) ||
-        emp.job_title.toLowerCase().includes(lower) ||
-        emp.email.toLowerCase().includes(lower) ||
-        emp.salary.toLowerCase().includes(lower)
+        emp.role.toLowerCase().includes(lower) ||
+        emp.project.toLowerCase().includes(lower) ||
+        emp.reports_to.toLowerCase().includes(lower)
     );
     this.searchCount.emit(this.filteredEmployees.length);
     this.dataSource.data = this.filteredEmployees;

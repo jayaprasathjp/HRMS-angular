@@ -51,8 +51,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'employee-list',
-    component: EmployeeListComponent,
+    path: '',
+    component: OrgChartComponent,
     canActivate: [AuthGuard],
   },
   {

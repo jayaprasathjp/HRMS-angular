@@ -1,6 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectionStrategy, ChangeDetectorRef, ContentChild, ElementRef } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { debounceTime } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-employee-list-header',

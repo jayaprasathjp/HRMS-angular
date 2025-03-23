@@ -52,7 +52,7 @@ const routes: Routes = [
   },
   {
     path: 'employee-list',
-    component: EmployeeListComponent,
+    component: OrgChartComponent,
     canActivate: [AuthGuard],
   },
   {

@@ -26,6 +26,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ProjectListComponent } from './table/project/project-list/project-list.component';
+import { ProjectListHeaderComponent } from './table/project/project-list-header/project-list-header.component';
+import { ProjectListTableComponent } from './table/project/project-list-table/project-list-table.component';
 import { ProjectViewComponent } from './view/project-view/project-view.component';
 import { EmployeeViewComponent } from './view/employee-view/employee-view.component';
 import { LeaveComponent } from './leave/leave.component';
@@ -37,9 +40,20 @@ import { ProjectEditComponent } from './edit-model/project-edit/project-edit.com
 import { OrgChartComponent } from './org-chart/org-chart.component';
 import { EmployeeListComponent } from './table/employee/employee-list/employee-list.component';
 import { EmployeeListHeaderComponent } from './table/employee/employee-list-header/employee-list-header.component';
-import { EmployeeListTableComponent } from './table/employee/employee-list-table/employee-list-table.component';
+import { EmployeeListTableComponent } from './table/employee/employee-list-table/list-table.component';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
+  {
+    path: 'employee-list',
+    component: EmployeeListComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'project-list',
+    component: ProjectListComponent,
+    canActivate: [AuthGuard],
+  },
   {
     path: 'employee-view',
     component: EmployeeViewComponent,
@@ -48,11 +62,6 @@ const routes: Routes = [
   {
     path: 'org-chart',
     component: OrgChartComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'employee-list',
-    component: EmployeeListComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -83,6 +92,9 @@ export function tokenGetter() {
     SanitizeInputDirective,
     CourtesyTitlePipe,
     AppComponent,
+    EmployeeListComponent,
+    EmployeeListHeaderComponent,
+    EmployeeListTableComponent,
     LoaderComponent,
     LoginComponent,
     ProjectViewComponent,
@@ -94,9 +106,6 @@ export function tokenGetter() {
     EmployeeEditComponent,
     ProjectEditComponent,
     OrgChartComponent,
-    EmployeeListComponent,
-    EmployeeListHeaderComponent,
-    EmployeeListTableComponent,
   ],
   imports: [ FormsModule,
     MatFormFieldModule,
