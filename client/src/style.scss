@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@include mat.core();
+@import '~toastify-js/src/toastify.css';
+
+mat-icon{
+    font-family: 'Material Icons' !important;
+  }
+
+  .small-alert {
+    font-size: 14px !important;  /* Reduce overall font size */
+  }
+  

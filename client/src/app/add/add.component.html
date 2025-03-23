@@ -1,0 +1,21 @@
+<div class=" p-4 bg-gray-100 flex items-center justify-center">
+    <div class="container max-w-screen-lg mx-auto">
+      <div class="justify-center flex">
+      <ul class="flex flex-wrap text-md font-semibold text-center text-gray-500 border-gray-200">
+        <li class="cursor-pointer" (click)="tabChange(true)">
+            <a [ngClass]="{ 'activeBar': employeeAdd }" class="inline-block p-4 w-28 rounded-t-lg hover:text-gray-600 hover:bg-gray-50">Employee</a>
+        </li>
+        <li class="me-2 cursor-pointer" (click)="tabChange(false)">
+            <a [ngClass]="{ 'activeBar': !employeeAdd }" class="w-28 inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 ">Project</a>
+        </li>
+    </ul>
+  </div>
+  <div *ngIf="employeeAdd">
+     <app-employee-add/>
+    </div >
+    <div *ngIf="!employeeAdd">
+       <app-project-add/>
+    </div>
+    </div>
+  </div>
+  

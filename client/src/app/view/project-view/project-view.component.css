@@ -1,0 +1,53 @@
+
+.card {
+    width: 95%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #555;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #222;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+    .section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+* {
+  font-family: "Josefin Sans", sans-serif;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+::ng-deep .mat-sort-header-arrow {
+  color: white;
+}
+
+.mat-mdc-header-cell{
+  background-color: #80573b !important;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}

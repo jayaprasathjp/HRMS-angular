@@ -1,0 +1,33 @@
+
+.card {
+    width: 800px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    margin: 20px auto;
+    padding-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #555;
+  }
+  .label {
+    font-weight: bold;
+    color: #222;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+    .section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

@@ -1,0 +1,470 @@
+{
+  "employee": [
+    {
+      "emp_id": "8507506",
+      "name": "Dinesh C",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "CRD",
+      "gender": "male",
+      "email": "dc@ups.com",
+      "phone": "8056111258",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8501258",
+      "name": "Deepa Somasundaram",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "CRD",
+      "gender": "female",
+      "email": "deepasomasundaram@ups.com",
+      "phone": "7358388068",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8540618",
+      "name": "Vinothkumar Vamanan",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "CRD",
+      "gender": "male",
+      "email": "vinothkumarvamanan@ups.com",
+      "phone": "9884207064",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8540641",
+      "name": "Muthukumar M",
+      "role": "Systems Programming Analyst",
+      "department": "EDA",
+      "project": "EDC",
+      "gender": "male",
+      "email": "muthukumarm@ups.com",
+      "phone": "9994113285",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8621028",
+      "name": "Sanjay Kumar",
+      "role": "Senior Data Engineer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "sanjaykumark@ups.com",
+      "phone": "9791736426",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8587105",
+      "name": "Pugalenthi Kannan",
+      "role": "Intermediate Apps Developer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "pugalenthikannan@ups.com",
+      "phone": "7094666533",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8578642",
+      "name": "Nishanth T",
+      "role": "Senior Data Engineer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "nishantht@ups.com",
+      "phone": "9834240229",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8528858",
+      "name": "Zerubba Rajan",
+      "role": "Senior Data Engineer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "female",
+      "email": "zrajan@ups.com",
+      "phone": "7418121019",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8539191",
+      "name": "Logeshwaran A S",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "las@ups.com",
+      "phone": "9655975422",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8575466",
+      "name": "Arunkumar K",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "arunkumark@ups.com",
+      "phone": "9629827259",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8621024",
+      "name": "Senthamizh SK",
+      "role": "Data Engineer",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "senthamizhs@ups.com",
+      "phone": "7448820645",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8517899",
+      "name": "Micheeal Ani Rufeena",
+      "role": "Data & Business Intelligence A",
+      "department": "EDA",
+      "project": "Fintech",
+      "gender": "male",
+      "email": "mrufeena@ups.com",
+      "phone": "9600190334",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8500397",
+      "name": "Pranessh AS",
+      "role": "Intermediate Apps Developer",
+      "department": "EDA",
+      "project": "GDAP",
+      "gender": "male",
+      "email": "pas@ups.com",
+      "phone": "9003189927",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8565144",
+      "name": "Gayathri Narayanan",
+      "role": "Intermediate Apps Developer",
+      "department": "EDA",
+      "project": "GDAP",
+      "gender": "female",
+      "email": "gayathrinarayanan@ups.com",
+      "phone": "9037404359",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8540620",
+      "name": "Rajeswari Nagarajan",
+      "role": "Senior Data Engineer",
+      "department": "EDA",
+      "project": "Infolib/DIR",
+      "gender": "female",
+      "email": "rajeswarinagarajan@ups.com",
+      "phone": "9840031553",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8540638",
+      "name": "Sridhar Balakrishnan",
+      "role": "Data Engineer",
+      "department": "EDA",
+      "project": "Infolib/DIR",
+      "gender": "male",
+      "email": "sbalakrishnan@ups.com",
+      "phone": "9677889838",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8521029",
+      "name": "Arun Nakulan",
+      "role": "Data Engineer",
+      "department": "EDA",
+      "project": "Infolib/DIR",
+      "gender": "male",
+      "email": "anakulan@ups.com",
+      "phone": "9496546453",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8504600",
+      "name": "Ronit Chacko",
+      "role": "Data Scientist",
+      "department": "EDA",
+      "project": "Internation Churn",
+      "gender": "male",
+      "email": "rchacko@ups.com",
+      "phone": "7041497995",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8529876",
+      "name": "Ajeeth Kumar",
+      "role": "Senior Data Engineer",
+      "department": "EDA",
+      "project": "Marketing",
+      "gender": "male",
+      "email": "ajeethkumarj@ups.com",
+      "phone": "9790721094",
+      "reports_to": "8539191"
+    },
+    {
+      "emp_id": "8570267",
+      "name": "Vivek Menon Madathiveetil",
+      "role": "Senior Machine Learning Engine",
+      "department": "EDA",
+      "project": "MLOPS",
+      "gender": "male",
+      "email": "vmadathiveetil@ups.com",
+      "phone": "9446597007",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8504558",
+      "name": "Karthik Venkatesh",
+      "role": "Senior Machine Learning Engine",
+      "department": "EDA",
+      "project": "MLOPS",
+      "gender": "male",
+      "email": "kvenkatesh@ups.com",
+      "phone": "9176159702",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8603104",
+      "name": "Nandhini Jayabalan",
+      "role": "Applications Devt Associate",
+      "department": "EDA",
+      "project": "MLOPS",
+      "gender": "female",
+      "email": "nandhinijayabalan@ups.com",
+      "phone": "7358597497",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8524674",
+      "name": "Nimil Raveendran",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "WAVE",
+      "gender": "male",
+      "email": "nraveendran@ups.com",
+      "phone": "7907487491",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8507526",
+      "name": "Praveen R",
+      "role": "Applications Devt Associate",
+      "department": "EDA",
+      "project": "WAVE",
+      "gender": "male",
+      "email": "praveenr@ups.com",
+      "phone": "9789494706",
+      "reports_to": "8540620"
+    },
+    {
+      "emp_id": "8891545",
+      "name": "Praveen Balaje K S",
+      "role": "Intermediate Apps Developer",
+      "department": "EDA",
+      "project": "GDAP",
+      "gender": "male",
+      "email": "pks@ups.com",
+      "phone": "9176264119",
+      "reports_to": "8540618"
+    },
+    {
+      "emp_id": "8938005",
+      "name": "Harini Gunasekaran",
+      "role": "INTERN",
+      "department": "EDA",
+      "project": "Lean Agile",
+      "gender": "female",
+      "email": "hgunasekaran@ups.com",
+      "phone": "8946082150",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8938008",
+      "name": "Jayaprasath K",
+      "role": "INTERN",
+      "department": "EDA",
+      "project": "GDAP",
+      "gender": "male",
+      "email": "jayaprasathk@ups.com",
+      "phone": "9894432092",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8938006",
+      "name": "Nikhil Kothamasu",
+      "role": "INTERN",
+      "department": "EDA",
+      "project": "MLOps",
+      "gender": "male",
+      "email": "nkothamasu@ups.com",
+      "phone": "9390209227",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8618662",
+      "name": "Krishore Kumar Vasudevan",
+      "role": "Data & Business Intelligence A",
+      "department": "EDA",
+      "project": "Marketing",
+      "gender": "male",
+      "email": "kvasudevan@ups.com",
+      "phone": "9789860721",
+      "reports_to": "8539191"
+    },
+    {
+      "emp_id": "8936258",
+      "name": "Indhu M",
+      "role": "Intermediate Apps Developer",
+      "department": "EDA",
+      "project": "FP",
+      "gender": "female",
+      "email": "im@ups.com",
+      "phone": "9952020250",
+      "reports_to": "8584567"
+    },
+    {
+      "emp_id": "8938712",
+      "name": "Rithuvanath Raja Vijayaraghavan",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "Lean Agile",
+      "gender": "male",
+      "email": "rvijayaraghavan@ups.com",
+      "phone": "9789055669",
+      "reports_to": "Swapnil Ingale"
+    },
+    {
+      "emp_id": "8941430",
+      "name": "Tamizharasan Loganathan",
+      "role": "Senior Applications Developer",
+      "department": "EDA",
+      "project": "AIT",
+      "gender": "male",
+      "email": "tloganathan@ups.com",
+      "phone": "9585955707",
+      "reports_to": "8584567"
+    }
+  ],
+  "manager": [
+    {
+      "emp_id": "8584567",
+      "name": "Swapnil Ingale",
+      "department": "EDA",
+      "gender": "male",
+      "email": "singale@ups.com",
+      "phone": "9373201073"
+    },
+    {
+      "emp_id": "8540620",
+      "name": "Rajeswari Nagarajan",
+      "department": "EDA",
+      "gender": "female",
+      "email": "rajeswarinagarajan@ups.com",
+      "phone": "9840031553"
+    },
+    {
+      "emp_id": "8540618",
+      "name": "Vinothkumar Vamanan",
+      "department": "EDA",
+      "gender": "male",
+      "email": "vinothkumarvamanan@ups.com",
+      "phone": "9884207064"
+    },
+    {
+      "emp_id": "8539191",
+      "name": "Logeshwaran A S",
+      "department": "EDA",
+      "gender": "male",
+      "email": "las@ups.com",
+      "phone": "9655975422"
+    }
+  ],
+  "department": [
+    {
+      "name": "EDA",
+      "description": "Enterprise Data Analytics"
+    }
+  ],
+  "project": [
+    {
+      "name": "CRD",
+      "description": "",
+      "manager": "8540618",
+      "lead": "8501258"
+    },
+    {
+      "name": "EDC",
+      "description": "",
+      "manager": "8540620",
+      "lead": "8540641"
+    },
+    {
+      "name": "Fintech",
+      "description": "",
+      "manager": "8584567",
+      "lead": "8517899"
+    },
+    {
+      "name": "GDAP",
+      "description": "",
+      "manager": "8540618",
+      "lead": "8500397"
+    },
+    {
+      "name": "Infolib/DIR",
+      "description": "",
+      "manager": "8540620",
+      "lead": "8540620"
+    },
+    {
+      "name": "Internation Churn",
+      "description": "",
+      "manager": "8584567",
+      "lead": "8504600"
+    },
+    {
+      "name": "Marketing",
+      "description": "",
+      "manager": "8539191",
+      "lead": "8529876"
+    },
+    {
+      "name": "MLOPS",
+      "description": "",
+      "manager": "8540618",
+      "lead": "8504558"
+    },
+    {
+      "name": "WAVE",
+      "description": "",
+      "manager": "8540620",
+      "lead": "8524674"
+    },
+    {
+      "name": "AIT",
+      "description": "",
+      "manager": "8584567",
+      "lead": "8941430"
+    },
+    {
+      "name": "FP",
+      "description": "",
+      "manager": "8584567",
+      "lead": "8936258"
+    },
+    {
+      "name": "Lean Agile",
+      "description": "",
+      "manager": "8584567",
+      "lead": "8938712"
+    }
+  ]
+}

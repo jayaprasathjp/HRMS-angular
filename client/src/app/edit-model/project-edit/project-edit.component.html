@@ -1,0 +1,133 @@
+<diV class="flex justify-center">
+  <h2 mat-dialog-title class="uppercase mt-4 font-semibold !text-yellow-500">
+    Edit Details
+  </h2>
+</diV>
+<mat-dialog-content>
+  <form [formGroup]="projectForm">
+    <div class="grid gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
+      <div class="text-gray-600 mb-2">
+        <p class="font-medium text-lg text-yellow-500">Enter project detail</p>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+          <div class="md:col-span-3">
+            <label for="name">Project Name</label>
+            <input
+              type="text"
+              id="name"
+              class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+              formControlName="name"
+            />
+            <div
+              class="text-red-500 text-xs mt-1"
+              *ngIf="
+                projectForm.controls.name.invalid &&
+                projectForm.controls.name.touched
+              "
+            >
+              Name is required.
+            </div>
+          </div>
+
+          <div class="md:col-span-5">
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              id="description"
+              class="h-32 border mt-1 rounded px-4 w-full bg-gray-50"
+              formControlName="description"
+            ></textarea>
+            <div
+              class="text-red-500 text-xs mt-1"
+              *ngIf="
+                projectForm.controls.description.invalid &&
+                projectForm.controls.description.touched
+              "
+            >
+              Description is required.
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <label for="manager">Manager</label>
+            <select
+              formControlName="manager"
+              id="manager"
+              class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+            >
+              <option [ngValue]="null">-- Select Manager --</option>
+              <option
+                *ngFor="let manager of managers"
+                [ngValue]="manager.emp_id"
+              >
+                {{ manager.name }}
+              </option>
+            </select>
+            <div
+              class="text-red-500 text-xs mt-1"
+              *ngIf="
+                projectForm.controls.manager.invalid &&
+                projectForm.controls.manager.touched
+              "
+            >
+              Manager is required.
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <label for="lead">Team lead</label>
+            <select
+              formControlName="lead"
+              id="lead"
+              class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+            >
+              <option [ngValue]="null">-- Select Team lead --</option>
+              <option
+                *ngFor="let member of TeamMembers"
+                [ngValue]="member.emp_id"
+              >
+                {{ member.name }}
+              </option>
+            </select>
+            <div
+              class="text-red-500 text-xs mt-1"
+              *ngIf="
+                projectForm.controls.lead.invalid &&
+                projectForm.controls.lead.touched
+              "
+            >
+              Team lead is required.
+            </div>
+          </div>
+          <!-- <div class="md:col-span-2">
+                <label for="lead">Team lead</label>
+                <input
+                  type="text"
+                  id="lead"
+                  class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+                  formControlName="lead"
+                />
+                <div class="text-red-500 text-xs mt-1" *ngIf="employeeForm.controls.reports_to.invalid && employeeForm.controls.reports_to.touched">
+                  Team Lead is required.
+                </div>
+              </div> -->
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions class="space-x-2 right-5" align="end">
+  <button
+    type="button"
+    (click)="onSubmit()"
+    class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 w-24 rounded-3xl disabled:opacity-25"
+    [disabled]="projectForm.invalid"
+  >
+    Submit
+  </button>
+  <button
+    class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 w-24 rounded-3xl disabled:opacity-25"
+    (click)="closeDialog()"
+  >
+    Close
+  </button>
+</mat-dialog-actions>

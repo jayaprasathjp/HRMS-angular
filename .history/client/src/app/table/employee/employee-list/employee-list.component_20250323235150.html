@@ -1,0 +1,11 @@
+<employee-list-header class="flex justify-center mb-3" (searchTerm)="term = ($event.target as HTMLInputElement)?.value">
+  <h5 #searchCount>Search result: {{ count }}</h5>
+</employee-list-header>
+
+<employee-list-table
+  class="flex justify-center"
+  [term]="term"
+  (searchCount)="updateCount($event)"
+>
+</employee-list-table>
+<empl
