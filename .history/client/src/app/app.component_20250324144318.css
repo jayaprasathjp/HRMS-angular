@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    border-collapse: collapse;
+  }
+  mat-toolbar {
+    background-color: #43251d !important;
+    color: #ffc400 !important;
+  }
+  mat-sidenav{
+    background-color: #543024 !important; 
+    color: white !important;
+  }
+  li.active {
+    background-color: oklch(.681 .162 75.834); 
+      border-bottom-left-radius: 0.75rem /* 12px */;
+      border-top-right-radius: 0.75rem /* 12px */;
+  }

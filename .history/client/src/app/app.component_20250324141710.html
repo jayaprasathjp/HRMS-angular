@@ -1,0 +1,142 @@
+<ng-container *ngIf="isLoggedIn">
+  <mat-toolbar
+    class="shadow-lg flex justify-between p-4  text-yellow-300 fixed w-full z-50"
+  >
+    <div class="flex">
+      <h2 class="text-center relative text-xl left-6 uppercase font-extrabold">
+        HRMS
+      </h2>
+      <mat-icon
+        (click)="toggleSidenav()"
+        class="mt-1 left-28 cursor-pointer absolute"
+        >menu</mat-icon
+      >
+    </div>
+    <div
+      class="font-semibold text-xl uppercase transition-all duration-200 ease-in-out"
+      [ngClass]="sidenav.opened && current != 'HRMS TOOL' ? 'ml-64' : 'ml-28'"
+
+    >
+      {{ current }}
+    </div>
+
+    <!-- <button
+      mat-button
+      class="p-5 hover:bg-yellow-900 text-white flex items-center"
+      (click)="authService.logout()"
+    ><mat-icon
+    class="align-middle"
+    >logout</mat-icon>
+      Logout
+    </button> -->
+    <div class="text-base" >
+    {{ current!='HRMS TOOL'?'Welcome, Swapnil Ingale':''}}
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="shadow-lg pt-16 h-screen">
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      opened
+      fixedInViewport="true"
+      class="mt-16 w-40  text-white p-4"
+    >
+      <mat-nav-list class="!flex flex-col h-full justify-between">
+        <div>
+        <ul class="space-y-1">
+          <li
+            [routerLink]="'/home'"
+            routerLinkActive="active"
+            (click)="this.current = 'HRMS TOOL'"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+          >
+          <mat-icon class="text-sm">home</mat-icon>
+            <a class="flex justify-center text-xs font-semibold">
+              <span class="pt-1">HOME</span>
+            </a>
+          </li>
+          <li
+            [routerLink]="'/employee-list'"
+            routerLinkActive="active"
+            (click)="this.current = 'EMPLOYEE LIST'"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+          >
+          <mat-icon class="text-sm">badge</mat-icon>
+            <a class="flex justify-center font-semibold text-xs">
+              <span class="pt-1">EMPLOYEE</span>
+            </a>
+          </li>
+          <li
+            [routerLink]="'/project-list'"
+            routerLinkActive="active"
+            (click)="this.current = 'PROJECT LIST'"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+          >
+          <mat-icon class="text-sm">work</mat-icon>
+            <a class="flex justify-center font-semibold text-xs">
+              <span class="pt-1">PROJECT</span>
+            </a>
+          </li>
+          <li
+            [routerLink]="'add'"
+            routerLinkActive="active"
+            (click)="this.current = 'ADD'"
+            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+          >
+          <mat-icon class="text-sm">add</mat-icon>
+            <a class="flex font-semibold text-xs">
+              <span class="pt-1">ADD</span>
+            </a>
+          </li>
+          <!-- <li 
+            [routerLink]="'/leave'"
+            routerLinkActive="active"
+            (click)="this.current = 'LEAVE'"
+            class=" pointer-events-none opacity-25 py-3 border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl disabled"
+          >
+            <a class="flex justify-center font-semibold text-xs space-x-2">
+              <span>LEAVE</span>
+            </a>
+          </li> -->
+          <li
+            [routerLink]="'/org-chart'"
+            routerLinkActive="active"
+            (click)="this.current = 'ORGANIZATION CHART'"
+            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-t-xl cursor-pointer"
+          >
+          <mat-icon class="text-sm">account_tree</mat-icon>
+            <a class="flex font-semibold text-xs  ">
+              <span class="pt-1">ORG CHART</span>
+            </a>
+          </li>
+          <ul class="bg-yellow-800 rounded-b-xl ">
+            <li class="text-xs text-center cursor-pointer p-1 pt-2 hover:bg-yellow-500/30" [routerLink]="'/org-chart/employee-tree'">EMPLOYEE</li>
+            <li class="text-xs pb-2 text-center cursor-pointer p-1 hover:bg-yellow-500/30 rounded-b-xl" [routerLink]="'/org-chart/project-tree'">PROJECT</li>
+          </ul>
+        </ul></div>
+        <div class=" mt-4 pt-2 flex justify-center">
+          <button mat-button
+          class="w-36 hover:bg-yellow-500/30 !text-white flex items-center"
+          (click)="authService.logout()"
+        ><mat-icon
+        class="align-middle"
+        >logout</mat-icon>
+          Logout
+        </button>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content
+      class="flex-1 bg-gray-100 p-4 flex justify-center text-gray-700 space-y-6"
+    >
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-loader></app-loader>
+</ng-container>
+<ng-container #container></ng-container>
+<ng-template #loginTemplate>
+  <router-outlet></router-outlet>
+</ng-template>
