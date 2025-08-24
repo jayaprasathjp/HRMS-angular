@@ -38,7 +38,6 @@ pipeline {
                     // remove any cached modules and reinstall fresh
                     bat '''
                         if exist node_modules rmdir /s /q node_modules
-                        if exist package-lock.json del package-lock.json
                         npm ci
                     '''
                 }
