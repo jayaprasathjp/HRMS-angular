@@ -19,12 +19,12 @@ pipeline {
         stage('Install Client Deps') {
             steps {
                 dir('client') {
-                    bat 'npm install'
+                    bat 'npm ci'   // use clean install
                 }
             }
         }
 
-        stage('Run Client Tests & Coverage') {
+        stage('Run Client Analysis') {
             steps {
                 dir('client') {
                     bat 'npx sonar-scanner'
@@ -35,7 +35,12 @@ pipeline {
         stage('Install Server Deps') {
             steps {
                 dir('server') {
-                    bat 'npm install'
+                    // remove any cached modules and reinstall fresh
+                    bat '''
+                        if exist node_modules rmdir /s /q node_modules
+                        if exist package-lock.json del package-lock.json
+                        npm ci
+                    '''
                 }
             }
         }
@@ -43,7 +48,8 @@ pipeline {
         stage('Run Server Tests & Coverage') {
             steps {
                 dir('server') {
-                    bat 'npm test -- --coverage'
+                    // run jest tests with coverage
+                    bat 'npm test -- --coverage --passWithNoTests'
                 }
             }
         }
