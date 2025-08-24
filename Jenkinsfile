@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS"   // Name must match Jenkins NodeJS config
+        nodejs "NodeJS"   // must match the NodeJS tool name in Jenkins global config
     }
 
     environment {
-        SONARQUBE = credentials('sonar-token') // Add Jenkins secret with your token
+        SONARQUBE = credentials('sonar-token') // Jenkins secret with your token
     }
 
     stages {
@@ -52,14 +52,15 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQubeLocal') {
                     bat """
-                        sonar-scanner \
-                          -Dsonar.projectKey=HRMS-angular \
-                          -Dsonar.projectName="HRMS-angular" \
-                          -Dsonar.sources=client/src,server \
-                          -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/*.spec.ts,**/coverage/** \
-                          -Dsonar.javascript.lcov.reportPaths=client/coverage/lcov.info,server/coverage/lcov.info \
-                          -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.token=$SONARQUBE
+                        sonar-scanner ^
+                          -Dsonar.projectKey=HRMS-angular ^
+                          -Dsonar.projectName="HRMS-angular" ^
+                          -Dsonar.projectVersion=1.0 ^
+                          -Dsonar.sources=client/src,server ^
+                          -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/*.spec.ts,**/coverage/** ^
+                          -Dsonar.javascript.lcov.reportPaths=client/coverage/lcov.info,server/coverage/lcov.info ^
+                          -Dsonar.host.url=http://localhost:9000 ^
+                          -Dsonar.token=%SONARQUBE%
                     """
                 }
             }
