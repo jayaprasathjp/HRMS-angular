@@ -56,7 +56,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQubeLocal') {
-                     bat "sonar-scanner -Dsonar.login=%SONARQUBE%"
+                     bat "C:\Users\JAYAPRASATH\Downloads\sonar-scanner-cli-7.2.0.5079-windows-x64\sonar-scanner-7.2.0.5079-windows-x64\bin\sonar-scanner.bat -Dsonar.login=%SONARQUBE%"
                 }
             }
         }
