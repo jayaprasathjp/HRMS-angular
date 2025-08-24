@@ -55,8 +55,9 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                // Call sonar-scanner using the sonar-project.properties file
-                bat "\"C:\\Users\\JAYAPRASATH\\Downloads\\sonar-scanner-cli-7.2.0.5079-windows-x64\\sonar-scanner-7.2.0.5079-windows-x64\\bin\\sonar-scanner.bat\" -Dsonar.login=%SONAR_TOKEN%"
+               withSonarQubeEnv('sonarqube') {
+            bat "\"C:\\Users\\JAYAPRASATH\\Downloads\\sonar-scanner-cli-7.2.0.5079-windows-x64\\sonar-scanner-7.2.0.5079-windows-x64\\bin\\sonar-scanner.bat\" -Dproject.settings=sonar-project.properties -Dsonar.login=%SONAR_TOKEN%"
+        }
             }
         }
 
