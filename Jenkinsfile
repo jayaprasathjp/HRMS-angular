@@ -52,15 +52,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQubeLocal') {
                     bat """
-                        sonar-scanner ^
-                          -Dsonar.projectKey=HRMS-angular ^
-                          -Dsonar.projectName="HRMS-angular" ^
-                          -Dsonar.projectVersion=1.0 ^
-                          -Dsonar.sources=client/src,server ^
-                          -Dsonar.exclusions=**/node_modules/**,**/dist/**,**/*.spec.ts,**/coverage/** ^
-                          -Dsonar.javascript.lcov.reportPaths=client/coverage/lcov.info,server/coverage/lcov.info ^
-                          -Dsonar.host.url=http://localhost:9000 ^
-                          -Dsonar.token=%SONARQUBE%
+                        sonar-scanner -Dsonar.token=%SONARQUBE%
                     """
                 }
             }
