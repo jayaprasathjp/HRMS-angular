@@ -19,7 +19,7 @@ pipeline {
         stage('Install Client Deps') {
             steps {
                 dir('client') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
         stage('Run Client Tests & Coverage') {
             steps {
                 dir('client') {
-                    sh 'npm run test -- --code-coverage --watch=false'
+                    bat 'npm run test -- --code-coverage --watch=false'
                 }
             }
         }
@@ -35,7 +35,7 @@ pipeline {
         stage('Install Server Deps') {
             steps {
                 dir('server') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -43,7 +43,7 @@ pipeline {
         stage('Run Server Tests & Coverage') {
             steps {
                 dir('server') {
-                    sh 'npm test -- --coverage'
+                    bat 'npm test -- --coverage'
                 }
             }
         }
@@ -51,7 +51,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQubeLocal') {
-                    sh """
+                    bat """
                         sonar-scanner \
                           -Dsonar.projectKey=HRMS-angular \
                           -Dsonar.projectName="HRMS-angular" \
