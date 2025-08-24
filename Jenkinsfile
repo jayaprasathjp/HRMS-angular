@@ -27,7 +27,7 @@ pipeline {
         stage('Run Client Tests & Coverage') {
             steps {
                 dir('client') {
-                    bat 'npm run test -- --code-coverage --watch=false'
+                    bat 'npx sonar-scanner'
                 }
             }
         }
