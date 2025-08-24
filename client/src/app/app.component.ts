@@ -48,8 +48,11 @@ export class AppComponent implements OnInit {
         this.current = 'HRMS TOOL';
       } else if (this.router.url === '/leave') {
         this.current = 'LEAVE';
-      } else if (this.router.url === '/org-chart') {
-        this.current = 'ORGANIZATION CHART';
+      } else if (this.router.url === '/org-chart/employee-tree') {
+        this.current = 'EMPLOYEE TREE';
+      }
+      else if (this.router.url === '/org-chart/project-tree') {
+        this.current = 'PROJECT TREE';
       }
     });
   }

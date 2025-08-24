@@ -144,37 +144,53 @@ router.get("/org-chart", (req, res) => {
     });
   }
 
-  project.forEach((pro) => {
-    result.forEach((res) => {
-      if (pro.manager == res.info.emp_id && res.level == 1) {
-        result.push({
-          id: cid++,
-          info: pro,
-          parentId: res.id,
-          level: 2,
-        });
-      }
-    });
-  });
 
-  project.forEach((pro) => {
-    proId = 0;
-    result.forEach((res) => {
-      if (res.info.name == pro.name) {
-        proId = res.id;
-      }
-    });
-    employee.forEach((emp) => {
-      if (pro.name == emp.project) {
-        result.push({
-          id: cid++,
-          info: emp,
-          parentId: proId,
-          level: 3,
+  result.forEach((res) => {
+      if (res.level==1) {
+        employee.forEach((emp) => {
+          if (res.info.emp_id == emp.reports_to) {
+            result.push({
+              id: cid++,
+              info: emp,
+              parentId: res.id,
+              level: 2,
+            });
+          }
         });
       }
     });
-  });
+
+  // project.forEach((pro) => {
+  //   result.forEach((res) => {
+  //     if (pro.manager == res.info.emp_id && res.level == 1) {
+  //       result.push({
+  //         id: cid++,
+  //         info: pro,
+  //         parentId: res.id,
+  //         level: 2,
+  //       });
+  //     }
+  //   });
+  // });
+
+  // project.forEach((pro) => {
+  //   proId = 0;
+  //   result.forEach((res) => {
+  //     if (res.info.name == pro.name) {
+  //       proId = res.id;
+  //     }
+  //   });
+  //   employee.forEach((emp) => {
+  //     if (pro.name == emp.project) {
+  //       result.push({
+  //         id: cid++,
+  //         info: emp,
+  //         parentId: proId,
+  //         level: 3,
+  //       });
+  //     }
+  //   });
+  // });
   res.json(result);
 });
 const fonts = {

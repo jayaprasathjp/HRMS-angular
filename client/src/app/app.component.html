@@ -115,8 +115,8 @@
           </li>
           <div *ngIf="orgChartLink.isActive" class="org-chart-list">
             <ul class="bg-yellow-800 rounded-b-xl ">
-              <li routerLinkActive="active" class="text-xs text-center cursor-pointer p-1 pt-2 border-gray-700 hover:bg-yellow-500/20" [routerLink]="'/org-chart/employee-tree'">EMPLOYEE</li>
-              <li routerLinkActive="active" class="text-xs pb-2 text-center cursor-pointer p-1 hover:bg-yellow-500/20 rounded-b-xl" [routerLink]="'/org-chart/project-tree'">PROJECT</li>
+              <li routerLinkActive="active" (click)="this.current = 'EMPLOYEE TREE'" class="text-xs text-center cursor-pointer p-1 pt-2 border-gray-700 hover:bg-yellow-500/20" [routerLink]="'/org-chart/employee-tree'">EMPLOYEE</li>
+              <li routerLinkActive="active" (click)="this.current = 'PROJECT TREE'" class="text-xs pb-2 text-center cursor-pointer p-1 hover:bg-yellow-500/20 rounded-b-xl" [routerLink]="'/org-chart/project-tree'">PROJECT</li>
             </ul>
           </div>
         </ul></div>
