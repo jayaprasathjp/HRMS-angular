@@ -2,5 +2,5 @@ projectKey=HRMS-angular
 serverUrl=http://localhost:9000
 serverVersion=25.8.0.112029
 dashboardUrl=http://localhost:9000/dashboard?id=HRMS-angular
-ceTaskId=48f559a9-cef1-4406-9976-653adb6c3229
-ceTaskUrl=http://localhost:9000/api/ce/task?id=48f559a9-cef1-4406-9976-653adb6c3229
+ceTaskId=8b9887e1-9d19-4f0f-b2d6-fdf567fdfab1
+ceTaskUrl=http://localhost:9000/api/ce/task?id=8b9887e1-9d19-4f0f-b2d6-fdf567fdfab1

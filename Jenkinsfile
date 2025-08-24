@@ -56,9 +56,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQubeLocal') {
-                    bat """
-                        sonar-scanner -Dsonar.token=%SONARQUBE%
-                    """
+                    bat "sonar-scanner"
                 }
             }
         }
