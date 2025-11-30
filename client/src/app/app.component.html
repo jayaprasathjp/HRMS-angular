@@ -1,6 +1,6 @@
 <ng-container *ngIf="isLoggedIn">
   <mat-toolbar
-    class="shadow-lg flex justify-between p-4  text-yellow-300 fixed w-full z-50"
+    class="shadow-lg flex justify-between p-4  text-cyan-300 fixed w-full z-50"
   >
     <div class="flex">
       <h2 class="text-center relative text-xl left-6 uppercase font-extrabold">
@@ -22,7 +22,7 @@
 
     <!-- <button
       mat-button
-      class="p-5 hover:bg-yellow-900 text-white flex items-center"
+      class="p-5 hover:bg-cyan-900 text-white flex items-center"
       (click)="authService.logout()"
     ><mat-icon
     class="align-middle"
@@ -49,7 +49,7 @@
             [routerLink]="'/home'"
             routerLinkActive="active"
             (click)="this.current = 'HRMS TOOL'"
-            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-cyan-500/30 rounded-xl cursor-pointer"
           >
           <mat-icon class="text-sm">home</mat-icon>
             <a class="flex justify-center text-xs font-semibold">
@@ -60,7 +60,7 @@
             [routerLink]="'/employee-list'"
             routerLinkActive="active"
             (click)="this.current = 'EMPLOYEE LIST'"
-            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-cyan-500/30 rounded-xl cursor-pointer"
           >
           <mat-icon class="text-sm">badge</mat-icon>
             <a class="flex justify-center font-semibold text-xs">
@@ -71,7 +71,7 @@
             [routerLink]="'/project-list'"
             routerLinkActive="active"
             (click)="this.current = 'PROJECT LIST'"
-            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+            class="py-2 pt-3  flex justify-center border-b border-gray-700 hover:bg-cyan-500/30 rounded-xl cursor-pointer"
           >
           <mat-icon class="text-sm">work</mat-icon>
             <a class="flex justify-center font-semibold text-xs">
@@ -82,7 +82,7 @@
             [routerLink]="'add'"
             routerLinkActive="active"
             (click)="this.current = 'ADD'"
-            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl cursor-pointer"
+            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-cyan-500/30 rounded-xl cursor-pointer"
           >
           <mat-icon class="text-sm">add</mat-icon>
             <a class="flex font-semibold text-xs">
@@ -93,7 +93,7 @@
             [routerLink]="'/leave'"
             routerLinkActive="active"
             (click)="this.current = 'LEAVE'"
-            class=" pointer-events-none opacity-25 py-3 border-b border-gray-700 hover:bg-yellow-500/30 rounded-xl disabled"
+            class=" pointer-events-none opacity-25 py-3 border-b border-gray-700 hover:bg-cyan-500/30 rounded-xl disabled"
           >
             <a class="flex justify-center font-semibold text-xs space-x-2">
               <span>LEAVE</span>
@@ -106,7 +106,7 @@
             #orgChartLink="routerLinkActive"
             [ngClass]="{'rounded-b-xl': !orgChartLink.isActive}" 
             (click)="this.current = 'ORGANIZATION CHART'"
-            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-yellow-500/30 rounded-t-xl cursor-pointer"
+            class="py-2 pt-3 flex justify-center border-b border-gray-700 hover:bg-cyan-500/30 rounded-t-xl cursor-pointer"
           >
           <mat-icon class="text-sm">account_tree</mat-icon>
             <a class="flex font-semibold text-xs  ">
@@ -114,15 +114,15 @@
             </a>
           </li>
           <div *ngIf="orgChartLink.isActive" class="org-chart-list">
-            <ul class="bg-yellow-800 rounded-b-xl ">
-              <li routerLinkActive="active" (click)="this.current = 'EMPLOYEE TREE'" class="text-xs text-center cursor-pointer p-1 pt-2 border-gray-700 hover:bg-yellow-500/20" [routerLink]="'/org-chart/employee-tree'">EMPLOYEE</li>
-              <li routerLinkActive="active" (click)="this.current = 'PROJECT TREE'" class="text-xs pb-2 text-center cursor-pointer p-1 hover:bg-yellow-500/20 rounded-b-xl" [routerLink]="'/org-chart/project-tree'">PROJECT</li>
+            <ul class="bg-cyan-800 rounded-b-xl ">
+              <li routerLinkActive="active" (click)="this.current = 'EMPLOYEE TREE'" class="text-xs text-center cursor-pointer p-1 pt-2 border-gray-700 hover:bg-cyan-500/20" [routerLink]="'/org-chart/employee-tree'">EMPLOYEE</li>
+              <li routerLinkActive="active" (click)="this.current = 'PROJECT TREE'" class="text-xs pb-2 text-center cursor-pointer p-1 hover:bg-cyan-500/20 rounded-b-xl" [routerLink]="'/org-chart/project-tree'">PROJECT</li>
             </ul>
           </div>
         </ul></div>
         <div class=" mt-4 pt-2 flex justify-center">
           <button mat-button
-          class="w-36 hover:bg-yellow-500/30 !text-white flex items-center"
+          class="w-36 hover:bg-cyan-500/30 !text-white flex items-center"
           (click)="authService.logout()"
         ><mat-icon
         class="align-middle"

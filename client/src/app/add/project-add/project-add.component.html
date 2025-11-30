@@ -2,7 +2,7 @@
     <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
       <div class="grid gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
         <div class="text-gray-600 mb-2">
-          <p class="font-medium text-lg text-yellow-500">Enter project detail</p>
+          <p class="font-medium text-lg text-cyan-500">Enter project detail</p>
         </div>
         <div class="lg:col-span-2">
           <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
@@ -65,7 +65,7 @@
             <div class="md:col-span-5 text-right ">
               <button
                 type="submit"
-                class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded disabled:opacity-25 " 
+                class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded disabled:opacity-25 " 
                 [disabled]="projectForm.invalid"
               >
                 Submit

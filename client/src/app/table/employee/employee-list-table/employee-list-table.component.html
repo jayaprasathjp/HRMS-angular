@@ -2,14 +2,14 @@
     <div class="overflow-x-auto">
         <div class="flex justify-between">
             <div class="ml-16 flex  p-2 bg-gray-100 rounded-t-xl">
-              <input type="text" (input)="trackChange('emp_id', $event)" placeholder="ID" class="rounded-lg w-16 px-4 focus:outline-yellow-400 py-1" />
-              <input type="text" (input)="trackChange('name', $event)" placeholder="Name" class="rounded-lg w-28 ml-3 px-4 focus:outline-yellow-400"/>
-              <input type="text" (input)="trackChange('role', $event)" placeholder="Role" class="rounded-lg w-36 px-4 ml-4 focus:outline-yellow-400"/>
-              <input type="text" (input)="trackChange('project', $event)" placeholder="Project" class="rounded-lg w-36 ml-4 px-4 focus:outline-yellow-400"/>
-              <input type="text" (input)="trackChange('reports_to', $event)" placeholder="Reports To" class="rounded-lg w-36 px-4 ml-6 focus:outline-yellow-400"/>
+              <input type="text" (input)="trackChange('emp_id', $event)" placeholder="ID" class="rounded-lg w-16 px-4 focus:outline-cyan-400 py-1" />
+              <input type="text" (input)="trackChange('name', $event)" placeholder="Name" class="rounded-lg w-28 ml-3 px-4 focus:outline-cyan-400"/>
+              <input type="text" (input)="trackChange('role', $event)" placeholder="Role" class="rounded-lg w-36 px-4 ml-4 focus:outline-cyan-400"/>
+              <input type="text" (input)="trackChange('project', $event)" placeholder="Project" class="rounded-lg w-36 ml-4 px-4 focus:outline-cyan-400"/>
+              <input type="text" (input)="trackChange('reports_to', $event)" placeholder="Reports To" class="rounded-lg w-36 px-4 ml-6 focus:outline-cyan-400"/>
             </div>
 <div>
-    <button (click)="generatePdf()" class="p-2 bg-yellow-500 my-1 mr-3 rounded-lg font-bold">EXPORT </button>
+    <button (click)="generatePdf()" class="p-2 bg-cyan-500 my-1 mr-3 rounded-lg font-bold">EXPORT </button>
 </div>
         </div>
     <table mat-table [dataSource]="dataSource" class="border-separate border-spacing-0 rounded-xl " matSort (matSortChange)="announceSortChange($event)">
